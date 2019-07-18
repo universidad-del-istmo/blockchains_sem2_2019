@@ -1,0 +1,178 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Programming/Coding Assignment
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Original author:
+% Ted Pavlic (http://www.tedpavlic.com)
+%
+% Note:
+% The \lipsum[#] commands throughout this template generate dummy  text
+% to fill the template out. These commands should all be removed when 
+% writing assignment content.
+%
+% This template uses a Perl script as an example snippet of code, most other
+% languages are also usable. Configure them in the "CODE INCLUSION 
+% CONFIGURATION" section.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\usepackage{fancyhdr} % Required for custom headers
+\usepackage{lastpage} % Required to determine the last page for the footer
+\usepackage{extramarks} % Required for headers and footers
+\usepackage[usenames,dvipsnames]{color} % Required for custom colors
+\usepackage{graphicx} % Required to insert images
+\usepackage{listings} % Required for insertion of code
+\usepackage{courier} % Required for the courier font
+\usepackage{multirow}
+\usepackage{hyperref}
+
+
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\linespread{1.1} % Line spacing
+
+%----------------------------------------------------------------------------------------
+%	CODE INCLUSION CONFIGURATION
+%----------------------------------------------------------------------------------------
+
+\definecolor{MyDarkGreen}{rgb}{0.0,0.4,0.0} % This is the color used for comments
+\lstloadlanguages{c} % Load Perl syntax for listings, for a list of other languages supported see: ftp://ftp.tex.ac.uk/tex-archive/macros/latex/contrib/listings/listings.pdf
+\lstset{language=[sharp]c, % Use Perl in this example
+        frame=single, % Single frame around code
+        basicstyle=\small\ttfamily, % Use small true type font
+        keywordstyle=[1]\color{Blue}\bf, % Perl functions bold and blue
+        keywordstyle=[2]\color{Purple}, % Perl function arguments purple
+        keywordstyle=[3]\color{Blue}\underbar, % Custom functions underlined and blue
+        identifierstyle=, % Nothing special about identifiers                                         
+        commentstyle=\usefont{T1}{pcr}{m}{sl}\color{MyDarkGreen}\small, % Comments small dark green courier font
+        stringstyle=\color{Purple}, % Strings are purple
+        showstringspaces=false, % Don't put marks in string spaces
+        tabsize=5, % 5 spaces per tab
+        %
+        % Put standard Perl functions not included in the default language here
+        morekeywords={rand},
+        %
+        % Put Perl function parameters here
+        morekeywords=[2]{on, off, interp},
+        %
+        % Put user defined functions here
+        morekeywords=[3]{test},
+       	%
+        morecomment=[l][\color{Blue}]{...}, % Line continuation (...) like blue comment
+        numbers=left, % Line numbers on left
+        firstnumber=1, % Line numbers start with line 1
+        numberstyle=\tiny\color{Blue}, % Line numbers are blue and small
+        stepnumber=5 % Line numbers go in steps of 5
+}
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
+
+% Creates a new command to include a perl script, the first parameter is the filename of the script (without .pl), the second parameter is the caption
+\newcommand{\perlscript}[2]{
+\begin{itemize}
+\item[]\lstinputlisting[caption=#2,label=#1]{#1.cs}
+\end{itemize}
+}
+
+\begin{document}
+
+\begin{tabular}{l l}
+\multirow{5}{*}{\includegraphics[width=2cm]{../recursos/logo.png}} & Universidad del Istmo de Guatemala \\
+ & Facultad de Ingenieria \\
+ & Ing. en Sistemas \\
+ & Curso libre configuraci\'on II: Blockchains \\
+ & Prof. Ernesto Rodriguez - \href{mailto:erodriguez@unis.edu.gt}{erodriguez@unis.edu.gt} \\
+\end{tabular}
+\\\\\\
+
+\begin{center}
+        \horrule{0.5pt}
+        \huge{Proyecto: Entrega Parcial \#1} \\
+        \large{Fecha de entrega: 11 de Agosto, 2019 - 11:59pm} \\
+        {Entrega preliminar: 1 de Agosto, 2019 - periodo de clase}
+        \horrule{1pt}
+\end{center}
+
+\section*{Introducci\'on}
+
+El objetivo de este proyecto es que el estudiante ponga en practica lo aprendido
+durante el curso de ``Ingenieria de Software'' para aplicar sus conocimientos sobre
+\emph{Blockchains} que seran aprendidos durante este curso.
+\\\\
+El estudiante tendra que resolver un problema de su eleccion utilizando Blockchains.
+Para ello el estudinate podra:
+\begin{itemize}
+        \item Crear un Blockchain especializado para ese problema
+        \item Utilizar un Blockchain existente para resolver el problema
+        \item Extender un Blockchain existente para resolver el problema
+\end{itemize}
+
+El problema que se trabajara no debe ser estrictamente un problema original
+del estudiante, puede tomar un problema existente y resolverlo. Se motiva al
+estudiante que escoga un problema de tal manera que su soluci\'on resulte en
+un aporte a la comunidad de software libre.
+\\\\
+Este trabajo se puede hacer de forma individual o en grupos de tama\~no
+arbitrario. Debe tomar en cuenta que las expectativas seran m\'as altas
+si el trabajo se lleva a cabo en grupos de mayor tama\~no.
+\\\\
+Este trabajo se entregara en 4 etapas, cada etapa debe mostrar avances
+en el proyecto. Se puede considerar cada entrega como un ``sprint'', seg\'un
+las metodologias agiles, sin embargo, seran calendarizadas en las semanas
+de examenes parciales ya que estas entregas seran la nota del examen parcial
+y final.
+
+\section*{Descripci\'on de la entrega \#1}
+El estudiante debe preparar un documento con el siguiente
+contenido:
+\begin{itemize}
+        \item Integrantes del grupo
+        \item Descripci\'on del problema que se trabajara
+        \item Propuesta para solucionar el problema
+        \item Herrameintas y technologias que se utilizaran el problema
+        \item Metodo para evaluar su soluci\'on y avances
+        \item {
+                Cronograma:
+                \begin{itemize}
+                        \item{
+                                Establecer que sera entregado
+                                en la entrega \#2, \#3, y entrega final
+                        }
+                        \item{
+                                Establecer como sera evaluada cada
+                                entrega.
+                        }
+                        \item{
+                                Establecer que se presentara durante
+                                cada entrega.
+                        }
+                \end{itemize}
+        }
+\end{itemize}
+
+\section*{Entrega y Calificaci\'on}
+
+El estudiante debe hacer una entrega preliminar seguido de una entrega
+final de este documento. La entrega preliminar tendra un valor de
+5\% de la zona y la entrega tendra un valor de 10\% de la zona.
+Durante la entrega preliminar, el profesor les estara dando retroalimentaci\'on
+del documento. Es muy importante que se participe en esta entrega ya que
+eso le permitira establecer parametros razonables para las siguientes entregas
+y la entrega final.
+
+\end{document}
