@@ -1,5 +1,7 @@
 # Ejercicio 2: Rifa Ethereum
 
+Fecha de entrega: 8 de Octubre, 2019
+
 ## Objetivo
 
 Crear uno (o varios) smart contracts en ethereum para simular una
